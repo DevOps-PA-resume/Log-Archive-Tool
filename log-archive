@@ -1,0 +1,8 @@
+#!/bin/bash
+
+output_dir="/home/pad/delivery/devops/Log-Archive-Tool/archives"
+dt=$(date '+%Y%m%d_%H%M%S');
+file_name="logs_archives_$dt.tar.gz"
+
+mkdir -p $output_dir
+tar -czvf $output_dir/$file_name $1
